@@ -17,6 +17,7 @@
       <ul class="pagination inline-flex">
         <li @click.prevent="changePage(1)" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l" :class="{ 'opacity-50 cursor-not-allowed': pagination.current_page <= 1 }">
             <i class="fas fa-angle-double-left"></i>
+
         </li>
         <li @click.prevent="changePage(pagination.current_page - 1)" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l" :class="{ 'opacity-50 cursor-not-allowed': pagination.current_page <= 1 }">
             <i class="fas fa-arrow-left"></i>
