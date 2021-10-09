@@ -1,16 +1,16 @@
 <template>
   <div class="main-content w-full flex-1 bg-gray-100 mt-12 md:mt-15 pb-24 md:pb-5">
-    <div class="bg-gray-800 pt-3">
-      <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-2 shadow text-white flex justify-between">
-        <h3 class="font-bold pl-2 text-2xl">Products</h3>
-        <router-link :to="{name:'adminProductCreate'}"
-                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">
-          <i class="fas fa-plus-square"></i> Add new
-        </router-link>
+    <div class="product-nav">
+      <div class="bg-gray-800 pt-3">
+        <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-2 shadow text-white flex justify-between">
+          <h3 class="font-bold pl-2 text-2xl">Products</h3>
+          <router-link :to="{name:'adminProductCreate'}"
+                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">
+            <i class="fas fa-plus-square"></i> Add new
+          </router-link>
+        </div>
       </div>
-    </div>
-    <div class="p-5">
-      <div class="flex flex-col md:flex-row pb-3">
+      <div class="search-div flex p-5  flex-col md:flex-row pb-3">
         <form @submit.prevent="getLists()" class="w-full float-right max-w-sm">
           <div class="flex items-center border-b border-teal-500 py-2">
             <input type="text" placeholder="Search..." v-model="form.search" autocomplete="off"
@@ -23,7 +23,8 @@
           </div>
         </form>
       </div>
-      <div class="md:flex-row">
+    </div>
+      <div class="p-5 md:flex-row">
         <div class="py-2 -my-2 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-full">
           <div
               class="inline-block min-w-full border-b border-gray-200 shadow sm:rounded-lg">
@@ -93,7 +94,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
